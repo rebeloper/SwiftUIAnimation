@@ -9,8 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello World")
+        VStack(spacing: 100) {
+            TitleView()
+                .offset(y: 100)
+            Spacer()
+            IconsView()
+            Spacer()
+            CardsView()
+                .offset(y: -100)
+        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
 }
 
