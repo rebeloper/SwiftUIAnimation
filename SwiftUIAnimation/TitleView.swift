@@ -15,7 +15,12 @@ struct TitleView: View {
     var body: some View {
             Text("Best Games")
                 .font(.largeTitle)
-                .fontWeight(.heavy)
+                .fontWeight(.heavy) // add scale effect
+                .scaleEffect(showTitle ? 1.2 : 1)
+                .animation(.easeInOut)
+                .onTapGesture {
+                    self.showTitle.toggle()
+        }
     }
     
     struct Title_Previews: PreviewProvider {

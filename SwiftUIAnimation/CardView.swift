@@ -25,7 +25,7 @@ struct CardView: View {
             .cornerRadius(20)
             .shadow(radius: 10)
             .offset(x: viewState.width, y: viewState.height)
-            .rotationEffect(Angle(degrees: 0)) // 10 : 0
+            .rotationEffect(Angle(degrees: showCards ? 10 : 0)) // 10 : 0
             .animation(.easeInOut(duration: animationDuration))
     }
 }
